@@ -1,0 +1,81 @@
+cmake_minimum_required(VERSION 3.14.2)
+
+project(build-tools)
+
+set(AOSP ${CMAKE_SOURCE_DIR}/aosp)
+
+set(aapt_headers
+    ${AOSP}/frameworks/base/tools/aapt
+    )
+set(aapt2_headers
+    ${AOSP}/frameworks/base/tools/aapt2
+    )
+set(androidfw_headers
+    ${AOSP}/frameworks/base/libs/androidfw/include
+    )
+set(expat_headers
+    ${AOSP}/external/expat
+    ${AOSP}/external/expat/lib
+    )
+set(fmtlib_headers
+    ${AOSP}/external/fmtlib/include
+    )
+set(gtest_headers
+    ${AOSP}/external/googletest/googletest/include
+    )
+set(libbacktrace_headers
+    ${AOSP}/system/unwinding/libbacktrace/include
+    )
+set(libbase_headers
+    ${AOSP}/system/libbase/include
+    )
+set(libbuildversion_headers
+    ${AOSP}/build/soong/cc/libbuildversion/include
+    )
+set(libcutils_headers
+    ${AOSP}/system/core/libcutils
+    ${AOSP}/system/core/libcutils/include
+    )
+set(libcxx_headers
+    ${AOSP}/external/libcxx/include
+    )
+set(libcxxabi_headers
+    ${AOSP}/external/libcxxabi/include
+    )
+set(libidmap2_policies_headers
+    ${AOSP}/frameworks/base/cmds/idmap2/libidmap2_policies/include
+    )
+set(libincfs-utils_headers
+    ${AOSP}/system/incremental_delivery/util/include
+    )
+set(liblog_headers
+    ${AOSP}/system/logging/liblog
+    ${AOSP}/system/logging/liblog/include
+    )
+set(libpng_headers
+    ${AOSP}/external/libpng
+    )
+set(libsystem_headers
+    ${AOSP}/system/core/libsystem/include
+    )
+set(libutils_headers
+    ${AOSP}/system/core/libutils
+    ${AOSP}/system/core/libutils/include
+    )
+set(libziparchive_headers
+    ${AOSP}/system/libziparchive
+    ${AOSP}/system/libziparchive/include
+    )
+set(native_headers
+    ${AOSP}/frameworks/native/include
+    )
+set(protobuf_headers
+    ${AOSP}/external/protobuf/config
+    ${AOSP}/external/protobuf/src
+    )
+set(zlib_headers
+    ${AOSP}/external/zlib
+    ${AOSP}/external/zlib/contrib/optimizations
+    )
+
+add_subdirectory(cmake)
