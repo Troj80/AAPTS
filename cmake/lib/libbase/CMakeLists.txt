@@ -7,7 +7,6 @@ set(BASE ${AOSP}/system/libbase)
 set(LIBBASE_SRC_FILES
     ${BASE}/abi_compatibility.cpp
     ${BASE}/chrono_utils.cpp
-    ${BASE}/cmsg.cpp
     ${BASE}/file.cpp
     ${BASE}/hex.cpp
     ${BASE}/logging.cpp
@@ -20,7 +19,8 @@ set(LIBBASE_SRC_FILES
     ${BASE}/strings.cpp
     ${BASE}/threads.cpp
     ${BASE}/test_utils.cpp
-    ${BASE}/errors_unix.cpp
+    ${BASE}/errors_windows.cpp
+    ${BASE}/utf8.cpp
     )
 
 include_directories(

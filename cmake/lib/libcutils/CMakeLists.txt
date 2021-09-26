@@ -5,11 +5,6 @@ project(libcutils)
 set(LIBCUTILS ${AOSP}/system/core/libcutils)
 
 set(LIBCUTILS_SRC_FILES
-    ${LIBCUTILS}/fs.cpp
-    ${LIBCUTILS}/hashmap.cpp
-    ${LIBCUTILS}/multiuser.cpp
-    ${LIBCUTILS}/str_parms.cpp
-
     ${LIBCUTILS}/config_utils.cpp
     ${LIBCUTILS}/canned_fs_config.cpp
     ${LIBCUTILS}/iosched_policy.cpp
@@ -19,17 +14,12 @@ set(LIBCUTILS_SRC_FILES
     ${LIBCUTILS}/record_stream.cpp
     ${LIBCUTILS}/strlcpy.c
     ${LIBCUTILS}/threads.cpp
-
-    ${LIBCUTILS}/ashmem-host.cpp
-    ${LIBCUTILS}/fs_config.cpp
     ${LIBCUTILS}/trace-host.cpp
 
     ${LIBCUTILS}/sockets.cpp
-    ${LIBCUTILS}/socket_inaddr_any_server_unix.cpp
-    ${LIBCUTILS}/socket_local_client_unix.cpp
-    ${LIBCUTILS}/socket_local_server_unix.cpp
-    ${LIBCUTILS}/socket_network_client_unix.cpp
-    ${LIBCUTILS}/sockets_unix.cpp
+    ${LIBCUTILS}/socket_inaddr_any_server_windows.cpp
+    ${LIBCUTILS}/socket_network_client_windows.cpp
+    ${LIBCUTILS}/sockets_windows.cpp
     )
 
 include_directories(
@@ -45,9 +35,12 @@ set(CMAKE_CXX_FLAGS "${GLOBAL_CXX_FLAGS} \
     -Werror \
     -Wall \
     -Wextra \
+    -D_GNU_SOURCE \
     ")
 
 
 add_library(cutils STATIC ${LIBCUTILS_SRC_FILES})
 
-target_link_libraries(cutils)
+target_link_libraries(cutils
+    ws2_32
+    )

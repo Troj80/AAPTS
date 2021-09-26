@@ -48,6 +48,7 @@ set(CMAKE_CXX_FLAGS "${GLOBAL_CXX_FLAGS} \
     -Werror \
     -Wunreachable-code \
     -DSTATIC_ANDROIDFW_FOR_TOOLS \
+    -Wno-missing-field-initializers \
     -Wno-reorder-init-list \
     -Wno-unused-but-set-variable \
     -Wno-defaulted-function-deleted \

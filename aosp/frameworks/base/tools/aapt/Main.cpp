@@ -31,7 +31,7 @@ int doVersion(Bundle* bundle)
     if (bundle->getFileSpecCount() != 0) {
         printf("(ignoring extra arguments)\n");
     }
-    printf("Android Asset Packaging Tool, v0.2-%s\n", android::build::GetBuildNumber().c_str());
+    printf("Android Asset Packaging Tool, v0.2-dev-mod 24.09.2021.\n", android::build::GetBuildNumber().c_str());
 
     return 0;
 }

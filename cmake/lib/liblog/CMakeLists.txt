@@ -12,7 +12,6 @@ set(LIBLOG_SRC_FILES
     ${LOG}/logger_write.cpp
     ${LOG}/logprint.cpp
     ${LOG}/properties.cpp
-    ${LOG}/event_tag_map.cpp
     )
 
 include_directories(

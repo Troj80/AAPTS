@@ -35,6 +35,9 @@ set(LIBCXX_SRC_FILES
     ${LIBCXX}/src/valarray.cpp
     ${LIBCXX}/src/variant.cpp
     ${LIBCXX}/src/vector.cpp
+    ${LIBCXX}/src/support/win32/locale_win32.cpp
+    ${LIBCXX}/src/support/win32/support.cpp
+    ${LIBCXX}/src/support/win32/thread_win32.cpp
     )
 
 
@@ -47,6 +50,11 @@ set(CMAKE_CXX_FLAGS "${GLOBAL_CXX_FLAGS} \
     -fexceptions \
     -DLIBCXX_BUILDING_LIBCXXABI \
     -D_LIBCPP_BUILDING_LIBRARY \
+    -D_LIBCPP_HAS_THREAD_API_WIN32 \
+    -D_LIBCXXABI_BUILDING_LIBRARY \
+    -D_LIBCPP_DISABLE_VISIBILITY_ANNOTATIONS \
+    -D_LIBCXXABI_DISABLE_VISIBILITY_ANNOTATIONS \
+    -UWIN32_LEAN_AND_MEAN \
     ")
 
 

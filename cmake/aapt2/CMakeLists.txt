@@ -154,7 +154,7 @@ set(CMAKE_CXX_FLAGS "${GLOBAL_CXX_FLAGS} \
     -fno-rtti \
     ")
 
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pthread -s")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -s")
 
 
 add_executable(aapt2 ${AAPT2_SRC_FILES})
@@ -174,8 +174,5 @@ target_link_libraries(aapt2
     log
     z
     c++
-    m
-    dl
-    rt
-    pthread
+    winpthread
     )

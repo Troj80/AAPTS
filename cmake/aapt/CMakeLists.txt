@@ -55,10 +55,9 @@ set(CMAKE_CXX_FLAGS "${GLOBAL_CXX_FLAGS} \
     -Wno-format-y2k \
     -DSTATIC_ANDROIDFW_FOR_TOOLS \
     -Wno-unused-but-set-variable \
-    
     ")
 
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pthread -s")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -s")
 
 
 add_executable(aapt ${AAPT_SRC_FILES})
@@ -77,8 +76,5 @@ target_link_libraries(aapt
     -Wl,--no-whole-archive
     z
     c++
-    m
-    dl
-    rt
-    pthread
+    winpthread
     )

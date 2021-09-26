@@ -23,9 +23,6 @@ set(fmtlib_headers
 set(gtest_headers
     ${AOSP}/external/googletest/googletest/include
     )
-set(libbacktrace_headers
-    ${AOSP}/system/unwinding/libbacktrace/include
-    )
 set(libbase_headers
     ${AOSP}/system/libbase/include
     )

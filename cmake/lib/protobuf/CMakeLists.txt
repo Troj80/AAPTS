@@ -103,6 +103,7 @@ set(CMAKE_CXX_FLAGS "${GLOBAL_CXX_FLAGS} \
     -Wno-sign-compare \
     -Wno-unused-parameter \
     -Wno-sign-promo \
+    -Wno-macro-redefined \
     -DHAVE_ZLIB=1 \
     -Wno-inconsistent-missing-override \
     ")

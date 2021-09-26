@@ -27,6 +27,7 @@ set(CMAKE_CXX_FLAGS "${GLOBAL_CXX_FLAGS} \
     -Werror \
     -Wall \
     -D_FILE_OFFSET_BITS=64 \
+    -mno-ms-bitfields \
     -Wno-missing-field-initializers \
     -Wconversion \
     -Wno-sign-conversion \

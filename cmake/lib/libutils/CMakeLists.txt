@@ -24,12 +24,10 @@ set(LIBUTILS_SRC_FILES
     ${LIBUTILS}/Unicode.cpp
     ${LIBUTILS}/VectorImpl.cpp
     ${LIBUTILS}/misc.cpp
-    ${LIBUTILS}/Looper.cpp
     )
 
 include_directories(
     ${libutils_headers}
-    ${libbacktrace_headers}
     ${liblog_headers}
     ${libcutils_headers}
     ${libbase_headers}
@@ -43,6 +41,8 @@ set(CMAKE_CXX_FLAGS "${GLOBAL_CXX_FLAGS} \
     -Wall \
     -Werror \
     -Wno-exit-time-destructors \
+    -DMB_CUR_MAX=1 \
+    -Wno-unused-private-field \
     ")
 
 
