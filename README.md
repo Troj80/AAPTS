@@ -1,4 +1,4 @@
-### This is a fork to build aapt/aapt2 for Linux and Windows
+### This is a fork to build aapt/aapt2 x86_64 for Linux and Windows
 https://github.com/Lzhiyong/sdk-tools
 https://github.com/MrIkso/sdk-tools/tree/apktool
 ____
