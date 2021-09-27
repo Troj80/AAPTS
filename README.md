@@ -27,7 +27,7 @@ rm cmake-3.21.3-linux-x86_64.tar.gz
 ```
 Build for Linux
 ```
-git clone https://github.com/pashamcr/AAPTS.git aats_linux
+git clone https://github.com/pashamcr/AAPTS.git aapts_linux
 cd aats_linux
 export CC=/home/pasha/programs/toolchains/llvm-clang-13.0.2-linux-x86_64/bin/clang
 export CXX=/home/pasha/programs/toolchains/llvm-clang-13.0.2-linux-x86_64/bin/clang++
