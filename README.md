@@ -28,22 +28,22 @@ rm cmake-3.21.3-linux-x86_64.tar.gz
 Build for Linux
 ```
 git clone https://github.com/pashamcr/AAPTS.git aapts_linux
-cd aats_linux
-export CC=/home/pasha/programs/toolchains/llvm-clang-13.0.2-linux-x86_64/bin/clang
-export CXX=/home/pasha/programs/toolchains/llvm-clang-13.0.2-linux-x86_64/bin/clang++
-export PATH=/home/pasha/programs/toolchains/protoc-3.9.1-linux-x86_64/bin:$PATH
-export PATH=/home/pasha/programs/toolchains/cmake-3.21.3-linux-x86_64/bin:$PATH
+cd aapts_linux
+export CC=/path/to/toolchains/llvm-clang-13.0.2-linux-x86_64/bin/clang
+export CXX=/path/to/toolchains/llvm-clang-13.0.2-linux-x86_64/bin/clang++
+export PATH=/path/to/toolchains/protoc-3.9.1-linux-x86_64/bin:$PATH
+export PATH=/path/to/toolchains/cmake-3.21.3-linux-x86_64/bin:$PATH
 cmake -G Ninja -S. -Bbuild && cmake --build build
 ```
 Build for Windows
 ```
 git clone -b windows https://github.com/pashamcr/AAPTS.git aapts_windows
 cd aapts_windows
-export CC=/home/pasha/programs/toolchains/llvm-clang-13.0.2-linux-x86_64/bin/clang
-export CXX=/home/pasha/programs/toolchains/llvm-clang-13.0.2-linux-x86_64/bin/clang++
-export MINGW=/home/pasha/programs/toolchains/mingw-w64-11.2-linux-x86_64
-export PATH=/home/pasha/programs/toolchains/protoc-3.9.1-linux-x86_64/bin:$PATH
-export PATH=/home/pasha/programs/toolchains/cmake-3.21.3-linux-x86_64/bin:$PATH
+export CC=/path/to/toolchains/llvm-clang-13.0.2-linux-x86_64/bin/clang
+export CXX=/path/to/toolchains/llvm-clang-13.0.2-linux-x86_64/bin/clang++
+export MINGW=/path/to/toolchains/mingw-w64-11.2-linux-x86_64
+export PATH=/path/to/toolchains/protoc-3.9.1-linux-x86_64/bin:$PATH
+export PATH=/path/to/toolchains/cmake-3.21.3-linux-x86_64/bin:$PATH
 cmake -G Ninja -S. -Bbuild && cmake --build build
 ```
 It is also possible to build in Windows aapt/aapt2 for Windows using MSYS2.
